@@ -17,56 +17,57 @@ class _LoginPageState extends State<LoginPage> {
   final passwordController = TextEditingController();
 
   void signUserIn() async {
-    //show loading circle
+    final email = emailController.text.trim();
+    final password = passwordController.text.trim();
+    if (email.isEmpty || password.isEmpty) {
+      showErrorDialog('Please enter both email and password');
+      return;
+    }
+    // Show loading circle
     showDialog(
-        context: context,
-        builder: (context) {
-          return const Center(
-            child: CircularProgressIndicator(),
-          );
-        });
-    //try sign in
+      context: context,
+      builder: (context) {
+        return const Center(
+          child: CircularProgressIndicator(),
+        );
+      },
+    );
+
+    // Try sign in
     try {
       await FirebaseAuth.instance.signInWithEmailAndPassword(
-        email: emailController.text,
-        password: passwordController.text,
+        email: email,
+        password: password,
       );
-      //pop the  indicator
+      // Pop the indicator
       Navigator.pop(context);
     } on FirebaseAuthException catch (e) {
-      //pop the circular progree indicator
+      // Pop the circular progress indicator
       Navigator.pop(context);
-      //Wrong email
+      print('Firebase Authentication Exception: ${e.message}');
+      // Wrong email
       if (e.code == 'user-not-found') {
-        //show error to user
-        wrongEmailMessage();
+        // Show error to user
+        showErrorDialog('Incorrect email');
       }
-      //Wrong password
+      // Wrong password
       else if (e.code == 'wrong-password') {
-        //show wrong password message
-        wrongPasswordMessage();
+        // Show wrong password message
+        showErrorDialog('Incorrect password');
+      } else {
+        showErrorDialog('Ah error occurred. Please try again later');
       }
     }
   }
 
   //Wrong email message popuopp
 
-  wrongEmailMessage() {
+  void showErrorDialog(String errorMessage) {
     showDialog(
         context: context,
         builder: (context) {
-          return const AlertDialog(
-            title: Text('Incorrect Email'),
-          );
-        });
-  }
-
-  wrongPasswordMessage() {
-    showDialog(
-        context: context,
-        builder: (context) {
-          return const AlertDialog(
-            title: Text('Incorrect password'),
+          return AlertDialog(
+            title: Text(errorMessage),
           );
         });
   }
