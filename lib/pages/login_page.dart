@@ -1,6 +1,7 @@
 import 'package:auth_project/components/my_button.dart';
 import 'package:auth_project/components/my_textfield.dart';
 import 'package:auth_project/components/square_title.dart';
+import 'package:auth_project/services/auth_service.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
@@ -155,14 +156,16 @@ class _LoginPageState extends State<LoginPage> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     SquareTitle(
+                      onTap: () => AuthService().sigInWithGoogle(),
                       widget: Image.network(
                         'http://pngimg.com/uploads/google/google_PNG19635.png',
                         height: 40,
                       ),
                     ),
                     const SizedBox(width: 10),
-                    const SquareTitle(
-                      widget: Icon(
+                    SquareTitle(
+                      onTap: () {},
+                      widget: const Icon(
                         Icons.apple,
                         size: 40,
                         color: Colors.black,
