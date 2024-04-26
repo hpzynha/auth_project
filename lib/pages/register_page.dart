@@ -3,7 +3,6 @@ import 'package:auth_project/components/my_textfield.dart';
 import 'package:auth_project/components/square_title.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 class RegisterPage extends StatefulWidget {
   final Function() onTap;
@@ -57,7 +56,7 @@ class _RegisterPageState extends State<RegisterPage> {
       if (mounted) {
         Navigator.pop(context);
       }
-      print('Firebase Authentication Exception: ${e.message}');
+
       // Wrong email or password
       showErrorMessage(e.code);
     }

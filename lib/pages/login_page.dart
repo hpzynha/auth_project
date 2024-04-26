@@ -49,7 +49,7 @@ class _LoginPageState extends State<LoginPage> {
       if (mounted) {
         Navigator.pop(context);
       }
-      print('Firebase Authentication Exception: ${e.message}');
+
       // Wrong email or password
       showErrorMessage(e.code);
     }
