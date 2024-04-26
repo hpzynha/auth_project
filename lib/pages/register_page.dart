@@ -78,7 +78,7 @@ class _RegisterPageState extends State<RegisterPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey,
+      backgroundColor: Colors.orange,
       body: SafeArea(
         child: Center(
           child: SingleChildScrollView(
@@ -86,12 +86,12 @@ class _RegisterPageState extends State<RegisterPage> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 const SizedBox(height: 25),
-                const Icon(Icons.lock, size: 50),
+                const Icon(Icons.food_bank_rounded, size: 100),
                 const SizedBox(height: 25),
-                Text(
+                const Text(
                   'Let\'s create an account for you!',
                   style: TextStyle(
-                    color: Colors.grey[700],
+                    color: Colors.white,
                     fontSize: 16,
                   ),
                 ),

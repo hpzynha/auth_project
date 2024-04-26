@@ -71,7 +71,7 @@ class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey,
+      backgroundColor: Colors.orange,
       body: SafeArea(
         child: Center(
           child: SingleChildScrollView(
@@ -80,14 +80,14 @@ class _LoginPageState extends State<LoginPage> {
               children: [
                 const SizedBox(height: 50),
                 const Icon(
-                  Icons.lock,
+                  Icons.food_bank_rounded,
                   size: 100,
                 ),
                 const SizedBox(height: 50),
-                Text(
+                const Text(
                   'Welcome back you\'ve been missed!',
                   style: TextStyle(
-                    color: Colors.grey[700],
+                    color: Colors.white,
                     fontSize: 16,
                   ),
                 ),
@@ -118,6 +118,7 @@ class _LoginPageState extends State<LoginPage> {
                     ],
                   ),
                 ),
+                const SizedBox(height: 10),
                 MyButton(
                   text: 'Sign In',
                   onTap: signUserIn,
