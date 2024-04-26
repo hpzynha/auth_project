@@ -87,7 +87,7 @@ class _LoginPageState extends State<LoginPage> {
                 const Text(
                   'Welcome back you\'ve been missed!',
                   style: TextStyle(
-                    color: Colors.white,
+                    color: Colors.black,
                     fontSize: 16,
                   ),
                 ),
@@ -95,24 +95,26 @@ class _LoginPageState extends State<LoginPage> {
                 MyTextField(
                   controller: emailController,
                   hintText: 'Username',
+                  showVisibilityIcon: false,
                   obscureText: false,
                 ),
                 const SizedBox(height: 10),
                 MyTextField(
                   controller: passwordController,
                   hintText: 'Password',
+                  showVisibilityIcon: true,
                   obscureText: true,
                 ),
                 const SizedBox(height: 10),
-                Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 25.0),
+                const Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 25.0),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: [
                       Text(
                         'Forgot Password?',
                         style: TextStyle(
-                          color: Colors.grey[600],
+                          color: Colors.black,
                         ),
                       ),
                     ],
@@ -124,29 +126,29 @@ class _LoginPageState extends State<LoginPage> {
                   onTap: signUserIn,
                 ),
                 const SizedBox(height: 50),
-                Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 25.0),
+                const Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 25.0),
                   child: Row(
                     children: [
                       Expanded(
                         child: Divider(
                           thickness: 0.5,
-                          color: Colors.grey[400],
+                          color: Colors.white,
                         ),
                       ),
                       Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 10),
+                        padding: EdgeInsets.symmetric(horizontal: 10),
                         child: Text(
                           'Or continue with',
                           style: TextStyle(
-                            color: Colors.grey[700],
+                            color: Colors.black,
                           ),
                         ),
                       ),
                       Expanded(
                         child: Divider(
                           thickness: 0.5,
-                          color: Colors.grey[400],
+                          color: Colors.white,
                         ),
                       ),
                     ],
@@ -178,9 +180,9 @@ class _LoginPageState extends State<LoginPage> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Text(
+                    const Text(
                       'Not a member?',
-                      style: TextStyle(color: Colors.grey[700]),
+                      style: TextStyle(color: Colors.black),
                     ),
                     const SizedBox(width: 4),
                     GestureDetector(
