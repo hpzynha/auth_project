@@ -103,6 +103,7 @@ class _RegisterPageState extends State<RegisterPage> {
                   icon: const Icon(Icons.email),
                   obscureText: false,
                   validateEmail: true,
+                  fieldType: FieldType.email,
                 ),
                 const SizedBox(height: 10),
                 MyTextField(
@@ -112,6 +113,7 @@ class _RegisterPageState extends State<RegisterPage> {
                   icon: const Icon(Icons.lock),
                   obscureText: true,
                   validateEmail: false,
+                  fieldType: FieldType.password,
                 ),
                 const SizedBox(height: 10),
                 MyTextField(
@@ -121,6 +123,7 @@ class _RegisterPageState extends State<RegisterPage> {
                   icon: const Icon(Icons.lock),
                   obscureText: true,
                   validateEmail: false,
+                  fieldType: FieldType.password,
                 ),
                 const SizedBox(height: 10),
                 MyButton(

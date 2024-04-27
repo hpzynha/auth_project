@@ -99,6 +99,7 @@ class _LoginPageState extends State<LoginPage> {
                   icon: const Icon(Icons.email),
                   obscureText: false,
                   validateEmail: true,
+                  fieldType: FieldType.email,
                 ),
                 const SizedBox(height: 10),
                 MyTextField(
@@ -108,6 +109,7 @@ class _LoginPageState extends State<LoginPage> {
                   showVisibilityIcon: true,
                   obscureText: true,
                   validateEmail: false,
+                  fieldType: FieldType.password,
                 ),
                 const SizedBox(height: 10),
                 const Padding(
