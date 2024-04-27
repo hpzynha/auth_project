@@ -96,14 +96,18 @@ class _LoginPageState extends State<LoginPage> {
                   controller: emailController,
                   hintText: 'Username',
                   showVisibilityIcon: false,
+                  icon: const Icon(Icons.email),
                   obscureText: false,
+                  validateEmail: true,
                 ),
                 const SizedBox(height: 10),
                 MyTextField(
                   controller: passwordController,
                   hintText: 'Password',
+                  icon: const Icon(Icons.lock),
                   showVisibilityIcon: true,
                   obscureText: true,
+                  validateEmail: false,
                 ),
                 const SizedBox(height: 10),
                 const Padding(
