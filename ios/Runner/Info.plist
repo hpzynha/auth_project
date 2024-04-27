@@ -17,17 +17,21 @@
         <string>Editor</string>
         <key>CFBundleURLSchemes</key>
         <array>
+            <string>fb1611890482903165</string>
             <string>com.googleusercontent.apps.790206159667-ov22ud1b1pk63ec7stmnoef2v26cl0ke</string>
         </array>
     </dict>
-    <dict>
-        <key>CFBundleTypeRole</key>
-        <string>Editor</string>
-        <key>CFBundleURLSchemes</key>
-        <array>
-            <string>***Something here***</string>
-        </array>
-    </dict>
+</array>
+<key>FacebookAppID</key>
+<string>1611890482903165</string>
+<key>FacebookClientToken</key>
+<string>bcebd61c518e513121809e7db066afe1</string>
+<key>FacebookDisplayName</key>
+<string>auth_project</string>
+<key>LSApplicationQueriesSchemes</key>
+<array>
+  <string>fbapi</string>
+  <string>fb-messenger-share-api</string>
 </array>
 	<!-- End of the Google Sign-in Section -->
 	<key>CFBundleDevelopmentRegion</key>

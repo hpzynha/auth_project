@@ -173,11 +173,11 @@ class _LoginPageState extends State<LoginPage> {
                     ),
                     const SizedBox(width: 10),
                     SquareTitle(
-                      onTap: () {},
+                      onTap: () => AuthService().signInWithFacebook(),
                       widget: const Icon(
-                        Icons.apple,
+                        Icons.facebook,
                         size: 40,
-                        color: Colors.black,
+                        color: Colors.blue,
                       ),
                     ),
                   ],
