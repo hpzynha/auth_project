@@ -25,3 +25,6 @@ Once authenticated, users gain access to the full functionality of your app, has
 
 Let's simplify authentication together! Feel free to reach out with any questions or feedback. Excited to hear what you think!
 
+![Screenshot 2024-04-28 at 3 20 10 PM](https://github.com/hpzynha/auth_project/assets/15235415/88d4efca-e393-4660-9f8f-2905a5039e68)
+
+
