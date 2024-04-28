@@ -24,3 +24,7 @@ Auth Project handles the authentication process securely in the background.
 Once authenticated, users gain access to the full functionality of your app, hassle-free!
 
 Let's simplify authentication together! Feel free to reach out with any questions or feedback. Excited to hear what you think!
+
+Check the post I did on linkedin
+
+<iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7189885222841155585" height="1196" width="504" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>
